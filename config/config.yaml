@@ -1,0 +1,21 @@
+main_dir: artifact
+
+data_ingestion:
+  root_dir: artifact/data_ingestion
+  kaggle_api_key: kaggle datasets download -d kunalgupta2616/flickr-8k-images-with-captions
+  local_files_dir: artifact/data_ingestion
+  unzip_dir: artifact/data_ingestion/data/
+
+
+model_training:
+  model_dir: artifact/prepared_model
+  pkl_file: artifact/images_features.pkl
+  saved_model_dir: artifact/prepared_model/model.h5
+  file_path: artifact/data_ingestion/data/captions.txt
+
+
+training:
+  train_dir: artifact/trained_model
+  pkl_file: artifact/images_features.pkl
+  saved_trained_model_dir: artifact/trained_model/model.h5
+
